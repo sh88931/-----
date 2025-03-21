@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعليم الأرقام</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🔢 تعليم الأرقام</h1>
+    <div class="numbers">
+        <div class="number" onclick="playSound('https://g.top4top.io/m_3367bnzl71.mp3')">
+            <img src="https://d.top4top.io/p_3367vxqg40.jpg" alt="رقم 1">
+            <p>1</p>
+        </div>
+        <div class="number" onclick="playSound('https://h.top4top.io/m_3367ol6672.mp3')">
+            <img src="https://h.top4top.io/p_3367zko9b4.png" alt="رقم 2">
+            <p>2</p>
+        </div>
+        <div class="number" onclick="playSound('https://i.top4top.io/m_33674tb6v3.mp3')">
+            <img src="https://i.top4top.io/p_3367j127i5.png" alt="رقم 3">
+            <p>3</p>
+        </div>
+        <div class="number" onclick="playSound('https://j.top4top.io/m_3367jwods4.mp3')">
+            <img src="https://j.top4top.io/p_3367hyser6.png" alt="رقم 4">
+            <p>4</p>
+        </div>
+        <div class="number" onclick="playSound('https://k.top4top.io/m_33677lw835.mp3')">
+            <img src="https://k.top4top.io/p_33674nybi7.png" alt="رقم 5">
+            <p>5</p>
+        </div>
+        <div class="number" onclick="playSound('https://l.top4top.io/m_3367rgnuy6.mp3')">
+            <img src="https://l.top4top.io/p_336769tqq8.png" alt="رقم 6">
+            <p>6</p>
+        </div>
+        <div class="number" onclick="playSound('https://a.top4top.io/m_3367j2u2m7.mp3')">
+            <img src="https://a.top4top.io/p_336749loa9.png" alt="رقم 7">
+            <p>7</p>
+        </div>
+        <div class="number" onclick="playSound('https://b.top4top.io/m_3367uyznz8.mp3')">
+            <img src="https://b.top4top.io/p_3363few9c0.png" alt="رقم 8">
+            <p>8</p>
+        </div>
+        <div class="number" onclick="playSound('https://c.top4top.io/m_336758deo9.mp3')">
+            <img src="https://c.top4top.io/p_3353l7lrm0.png" alt="رقم 9">
+            <p>9</p>
+        </div>
+        <div class="number" onclick="playSound('https://d.top4top.io/m_3367c8ur53.mp3')">
+            <img src="https://d.top4top.io/p_3353omidb0.png" alt="رقم 10">
+            <p>10</p>
+        </div>
+    </div>
+
+    <button onclick="goHome()">🏠 الرجوع للقائمة الرئيسية</button>
+
+    <script>
+        function playSound(audioUrl) {
+            new Audio(audioUrl).play();
+        }
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أغاني تعليمية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🎶 أغاني تعليمية للأطفال</h1>
+    <div class="songs">
+        <button onclick="playSound('https://e.top4top.io/m_3367wri470.m4a')">🎵 أغنية 1</button>
+        <button onclick="playSound('https://f.top4top.io/m_33670s7b11.m4a')">🎵 أغنية 2</button>
+        <button onclick="playSound('https://g.top4top.io/m_336715rpf2.m4a')">🎵 أغنية 3</button>
+    </div>
+    
+    <button onclick="goHome()">🏠 الرجوع للقائمة الرئيسية</button>
+    
+    <script>
+        function playSound(audioUrl) {
+            new Audio(audioUrl).play();
+        }
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

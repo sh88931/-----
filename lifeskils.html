@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهارات الحياتية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🏆 المهارات الحياتية</h1>
+
+    <!-- نشاط تنظيف الأسنان -->
+    <div class="activity">
+        <h2>🦷 تنظيف الأسنان</h2>
+        <p>اسحب الفرشاة إلى الأسنان لتنظيفها</p>
+        <div class="drag-container">
+            <img id="tooth" src="https://g.top4top.io/p_3367ys0np2.png" alt="أسنان متسخة">
+            <img id="brush" src="https://f.top4top.io/p_3363dz2le0.png" alt="فرشاة الأسنان" draggable="true" ondragstart="drag(event)">
+        </div>
+    </div>
+
+    <!-- نشاط ترتيب الملابس -->
+    <div class="activity">
+        <h2>🧺 ترتيب الملابس</h2>
+        <p>اسحب الملابس إلى السلة</p>
+        <div class="drag-container">
+            <img id="clothes" src="https://k.top4top.io/p_3367jlqye0.png" alt="ملابس مبعثرة" draggable="true" ondragstart="drag(event)">
+            <img id="basket" src="https://l.top4top.io/p_336733t0w1.png" alt="سلة الملابس" ondragover="allowDrop(event)" ondrop="drop(event, 'clothes')">
+        </div>
+    </div>
+
+    <!-- نشاط مساعدة الصديق -->
+    <div class="activity">
+        <h2>🤕 مساعدة الصديق</h2>
+        <p>اضغط على الزر لمساعدة صديقك</p>
+        <button onclick="showResult(true)">✅ مساعدة</button>
+        <button onclick="showResult(false)">❌ تجاهل</button>
+        <img id="friend" src="https://f.top4top.io/p_33677mesr0.png" style="display: none;">
+    </div>
+
+    <button onclick="goHome()">🏠 الرجوع للقائمة الرئيسية</button>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event, targetId) {
+            event.preventDefault();
+            const draggedId = event.dataTransfer.getData("text");
+            if (draggedId === targetId) {
+                document.getElementById(targetId).style.display = "none";
+                alert("🎉 أحسنت! لقد أكملت النشاط بنجاح!");
+            } else {
+                alert("❌ حاول مرة أخرى!");
+            }
+        }
+
+        function showResult(correct) {
+            if (correct) {
+                document.getElementById("friend").style.display = "block";
+                alert("🎉 أحسنت! لقد ساعدت صديقك!");
+            } else {
+                alert("❌ حاول مرة أخرى!");
+            }
+        }
+
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
