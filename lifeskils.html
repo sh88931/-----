@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المهارات الحياتية</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* لتنسيق العناصر */
+        .activity {
+            margin-bottom: 20px;
+        }
+
+        .drag-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #tooth, #clothes {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        #brush {
+            width: 70px;
+            height: 70px;
+        }
+
+        #basket {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #000;
+            margin-left: 10px;
+        }
+
+        #friend {
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+        }
+
+        /* لتنسيق الأزرار */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>🏆 المهارات الحياتية</h1>
@@ -41,14 +85,17 @@
     <button onclick="goHome()">🏠 الرجوع للقائمة الرئيسية</button>
 
     <script>
+        // يسمح بالإفلات
         function allowDrop(event) {
             event.preventDefault();
         }
 
+        // بدء السحب
         function drag(event) {
             event.dataTransfer.setData("text", event.target.id);
         }
 
+        // معالجة الإفلات
         function drop(event, targetId) {
             event.preventDefault();
             const draggedId = event.dataTransfer.getData("text");
@@ -60,6 +107,7 @@
             }
         }
 
+        // إظهار نتيجة مساعدة الصديق
         function showResult(correct) {
             if (correct) {
                 document.getElementById("friend").style.display = "block";
@@ -69,8 +117,9 @@
             }
         }
 
+        // العودة للقائمة الرئيسية
         function goHome() {
-            window.location.href = "index.html";
+            window.location.href = "index.html"; // تأكد أن هذه الصفحة موجودة في المسار الصحيح
         }
     </script>
 </body>
