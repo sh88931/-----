@@ -8,16 +8,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* لون خلفية هادئ */
+            background: url('https://www.w3schools.com/w3images/forestbridge.jpg') no-repeat center center fixed; /* خلفية طبيعية */
+            background-size: cover;
             margin: 0;
             padding: 0;
             text-align: center;
+            color: white;
         }
-        
+
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-top: 20px;
-            color: #333;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .container {
@@ -27,44 +30,51 @@
 
         .activities {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 20px;
             justify-items: center;
         }
 
         .activity {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* خلفية شبه شفافة */
+            border-radius: 15px;
+            border: 2px solid #ffffff; /* إطار حول الأقسام */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             text-align: center;
-            padding: 10px;
-            width: 180px;
-            transition: transform 0.3s ease;
+            padding: 20px;
+            width: 200px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
         }
 
         .activity:hover {
-            transform: scale(1.05);
+            transform: scale(1.1); /* تكبير القسم عند التمرير */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* تأثير الظل عند التمرير */
         }
 
         .activity img {
             max-width: 100%;
             border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .activity img:hover {
+            transform: scale(1.05); /* تكبير الصورة عند التمرير */
         }
 
         .activity p {
             margin-top: 10px;
-            font-size: 1.1em;
-            color: #444;
+            font-size: 1.2em;
+            color: #333;
         }
 
         /* For mobile responsiveness */
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
 
             .activity {
-                width: 150px;
+                width: 160px;
             }
         }
     </style>
