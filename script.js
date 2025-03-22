@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const activities = document.querySelectorAll('.activity');
+    let points = 0;
 
     activities.forEach(activity => {
         activity.addEventListener('click', function(event) {
@@ -14,4 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.style.transition = 'opacity 0.5s';
     document.body.style.opacity = '1';
+
+    // نظام المكافآت
+    function addPoints() {
+        points += 1;
+        document.getElementById("points").innerText = points;
+    }
+
+    // مثال عند النجاح في أي نشاط
+    window.addPoints = addPoints;
 });

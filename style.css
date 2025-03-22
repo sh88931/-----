@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     background: url('https://i.top4top.io/p_33678hl5r1.png') no-repeat center center/cover;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -12,7 +13,7 @@ body {
 
 h1 {
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     background: rgba(0, 0, 0, 0.6);
     display: inline-block;
     padding: 10px 20px;
@@ -28,30 +29,41 @@ h1 {
 }
 
 .activity {
-    width: 160px;
-    padding: 10px;
+    width: 180px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.9);
-    border: 3px solid #ff758c;
-    border-radius: 10px;
+    border: 6px solid #ffcc00;
+    border-radius: 50%;
     text-decoration: none;
     color: #ff758c;
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
     text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .activity:hover {
     transform: scale(1.1);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .activity img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .activity p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+#reward {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
 }
